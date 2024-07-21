@@ -1,0 +1,180 @@
+<style>
+    .top_head_div {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .top_head {
+        
+        height: 50px;
+        width: 150px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: gray;
+        border-radius: 10%;
+        text-align: center;
+        padding-bottom: 10px
+    }
+    .top_head:hover{
+        background:#cfc8c8;
+    }
+    #body_outer_div{
+        display:grid;
+        grid-template-columns: auto auto;
+        
+    }
+    li{
+        text-align:center;
+    }
+    li:hover{
+        background:#cfc8c8;
+    }
+    .Out {
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        width: 150px;
+        text-align: center;
+
+    }
+</style>
+
+
+
+<head><!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <title>Game Page</title>
+    <div class="top_head_div">
+        <div class="top_head" onclick="highlightLink(this); showDiv1(); Process('Dota');">
+            <h3>Dota</h3>
+        </div>
+        <div class="top_head" onclick="highlightLink(this); showDiv2(); Process('Pubg');">
+            <h3>Pubg</h3>
+        </div>
+        <div class="top_head" onclick="highlightLink(this); showDiv3(); Process('CS');">
+            <h3>CS</h3>
+        </div>
+        <div class="top_head" onclick="highlightLink(this); showDiv4(); Process('TOD');">
+            <h3>TOD</h3>
+        </div>
+    </div>
+</head>
+<body>
+    </br>
+    </br>
+    <div id="body_outer_div">
+        <div>
+            <h2 style="padding-left:60px;">Steps</h2>
+            <div style="display:none;width:140px;" id="Div1">
+                <ol></br>
+                    <li onclick="highlightLink_inside(this); Step('Game finding');" style="border-radius:10px;">Game finding</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Hero selection');" style="border-radius:10px;">Hero selection</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Farm');" style="border-radius:10px;">Farm</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Fight');" style="border-radius:10px;">Fight</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Win');" style="border-radius:10px;">Win</li></br>
+                </ol>
+            </div>
+            <div style="display:none;width:140px;" id="Div2">
+                <ol></br>
+                    <li onclick="highlightLink_inside(this); Step('Make a squad');" style="border-radius:10px;">Make a squad</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Decide a squad');" style="border-radius:10px;">Decide a squad</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Get guns');" style="border-radius:10px;">Get guns</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Safe in region');" style="border-radius:10px;">Safe in region</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Chiken dinner');" style="border-radius:10px;">Chicken dinner</li>
+
+                </ol>
+            </div>
+            <div style="display:none;width:140px;" id="Div3">
+                <ol></br>
+                    <li onclick="highlightLink_inside(this); Step('Select a team');" style="border-radius:10px;">Select a team</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Attack');" style="border-radius:10px;">Attack</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Win');">Win</li></br>
+                </ol>
+            </div>
+            <div style="display:none;width:85px;" id="Div4">
+                <ol></br>
+                    <li onclick="highlightLink_inside(this); Step('Chill');" style="border-radius:10px;">Chill</li></br>
+                    <li onclick="highlightLink_inside(this); Step('Repeat');" style="border-radius:10px;">Repeat</li>
+                </ol>
+            </div>
+        </div>
+
+        <div>
+            <!--Output-->
+            <h2 style="text-align:center;padding-left:100px;">Display</h2></br>
+            <div style="display:grid; grid-template-columns:auto auto; auto-fill:repeat(60px,1fr);">
+                <p>Process Selected:</p>
+                <p id="process" class="Out"></p>
+            </div>
+            <div style="display:grid; grid-template-columns:auto auto; auto-fill:repeat(60px,1fr);">
+                <p style="padding-left:16px;">Step  Selected :</p>
+                <p id="step" class="Out"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    var highlightLink = function () {
+        var active = null, colour = '#ADD8EC';
+        if (this.attachEvent) this.attachEvent('onunload', function () {
+            active = null;
+        });
+        return function (element) {
+            if ((active != element) && element.style) {
+                if (active) active.style.backgroundColor = '';
+                element.style.backgroundColor = colour;
+                active = element;
+            }
+        };
+
+    }();
+
+    var highlightLink_inside = function () {
+        var active = null, colour = '#ADD8EC';
+        if (this.attachEvent) this.attachEvent('onunload', function () {
+            active = null;
+        });
+        return function (element) {
+            if ((active != element) && element.style) {
+                if (active) active.style.backgroundColor = '';
+                element.style.backgroundColor = colour;
+                active = element;
+            }
+        };
+
+    }();
+
+    function showDiv1() {
+        document.getElementById('Div1').style.display = "block";
+        document.getElementById('Div2').style.display = "none";
+        document.getElementById('Div3').style.display = "none";
+        document.getElementById('Div4').style.display = "none";
+    }
+    function showDiv2() {
+        document.getElementById('Div1').style.display = "none";
+        document.getElementById('Div2').style.display = "block";
+        document.getElementById('Div3').style.display = "none";
+        document.getElementById('Div4').style.display = "none";
+    }
+    function showDiv3() {
+        document.getElementById('Div1').style.display = "none";
+        document.getElementById('Div2').style.display = "none";
+        document.getElementById('Div3').style.display = "block";
+        document.getElementById('Div4').style.display = "none";
+    }
+    function showDiv4() {
+        document.getElementById('Div1').style.display = "none";
+        document.getElementById('Div2').style.display = "none";
+        document.getElementById('Div3').style.display = "none";
+        document.getElementById('Div4').style.display = "block";
+    }
+    function Process(name) {
+        document.getElementById("process").innerHTML = name;
+        document.getElementById("step").innerHTML = '';
+    }
+    function Step(name) {
+        document.getElementById("step").innerHTML = name;
+    }
+
+</script>

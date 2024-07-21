@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <form name="form1" action="#">
+        <table>
+            <th><span style="color: #ff6600; background-color: #000080;"><h2>Buy Product</h2></span></th>
+            <tr>
+                <td><label for="cars">Product Id</label></td>
+
+                <td>
+                    <select name="cars" id="cars">
+                        <option value="volvo">P002</option>
+                        <option value="saab">P001</option>
+                        <option value="mercedes">P003</option>
+                        <option value="audi">P005</option>
+                        <option value="mercedes">P003</option>
+                        <option value="audi">P005</option>
+                        <option value="mercedes">P003</option>
+                        <option value="audi">P005</option>
+                        <option value="mercedes">P003</option>
+                        <option value="audi">P005</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="text1"></td>
+            </tr>
+            <tr>
+                <td>Number of Products Available</td>
+                <td><input type="number" name="ctext1" max="32"></td>
+            </tr>
+            <tr>
+                <td>Number of Products</td>
+                <td><input type="number" max="5"></td>
+            </tr>
+            <tr>
+                <td>Product Cost</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Total Cost</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script>
+    function CheckPassword(inputtxt) {
+        var paswd = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{0,100}$/;
+        if (inputtxt.value.match(paswd)) {
+            //alert('Correct, try another...')
+            return true;
+        } else {
+            //alert('Wrong...!')
+            return false;
+        }
+    }
+
+    function cpw(in1, in2) {
+        if (in1.value === in2.value) {
+            //alert('True');
+            return true;
+        } else {
+            //alert('False');
+            return false;
+        }
+    }
+
+    function mail(txt) {
+        var email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        if (txt.value.match(email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>

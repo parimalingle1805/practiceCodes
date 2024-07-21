@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "tttt.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false
+        },
+        {
+            "name": "(Windows) Attach",
+            "type": "cppvsdbg",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        
+        
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EncryptionFile",
+            "request": "launch",
+            "mainClass": "EncryptionFile",
+            "projectName": "p11_ed42264b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - testjava",
+            "request": "launch",
+            "mainClass": "testjava",
+            "projectName": "p11_ed42264b"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

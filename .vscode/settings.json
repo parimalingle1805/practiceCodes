@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Users\\Parimal\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
+    "fortran.fortls.disabled": true,
+    "C_Cpp.errorSquiggles": "enabled"
+}
